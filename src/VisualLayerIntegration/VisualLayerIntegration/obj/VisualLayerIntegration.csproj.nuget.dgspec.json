@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj",
+        "projectName": "VisualLayerIntegration",
+        "projectPath": "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj",
+        "packagesPath": "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\bt385.EMLAKBANK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "target": "Package",
+              "version": "[2.9.1, )"
+            },
+            "Microsoft.Windows.SDK.Contracts": {
+              "target": "Package",
+              "version": "[10.0.17763.144-preview, )"
+            },
+            "SharpDX": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "SharpDX.DXGI": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "SharpDX.Direct2D1": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "SharpDX.Mathematics": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "uap10.0.17763"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
