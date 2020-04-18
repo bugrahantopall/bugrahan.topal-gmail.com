@@ -1,28 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj": {}
+    "C:\\Users\\bugra\\Documents\\ScrennCapturer\\bugrahan.topal-gmail.com\\src\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj": {
+    "C:\\Users\\bugra\\Documents\\ScrennCapturer\\bugrahan.topal-gmail.com\\src\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj",
+        "projectUniqueName": "C:\\Users\\bugra\\Documents\\ScrennCapturer\\bugrahan.topal-gmail.com\\src\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj",
         "projectName": "VisualLayerIntegration",
-        "projectPath": "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj",
-        "packagesPath": "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\obj\\",
+        "projectPath": "C:\\Users\\bugra\\Documents\\ScrennCapturer\\bugrahan.topal-gmail.com\\src\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj",
+        "packagesPath": "C:\\Users\\bugra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bugra\\Documents\\ScrennCapturer\\bugrahan.topal-gmail.com\\src\\VisualLayerIntegration\\VisualLayerIntegration\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\bt385.EMLAKBANK\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\bugra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,10 +34,6 @@
       "frameworks": {
         "net472": {
           "dependencies": {
-            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
-              "target": "Package",
-              "version": "[2.9.1, )"
-            },
             "Microsoft.Windows.SDK.Contracts": {
               "target": "Package",
               "version": "[10.0.17763.144-preview, )"
@@ -57,11 +53,6 @@
             "SharpDX.Mathematics": {
               "target": "Package",
               "version": "[4.2.0, )"
-            },
-            "StyleCop.Analyzers": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.0.2, )"
             },
             "System.Numerics.Vectors": {
               "target": "Package",

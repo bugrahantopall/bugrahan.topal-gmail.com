@@ -1,30 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "EXrggTtO+vaIXUEYCSpZpqeW9Yi8TO5lEUXJc4sM+Yki97xINIqFvq80ip97sMB1Lavc2Fym78SvNLIgoehwXA==",
+  "dgSpecHash": "rdJtYQp+nKXsXnKhXcozR/JuCtfdxzSVfcBKJDzMJecu1sHiWKS2FxvduE9JYPwLjFAqMoHnv8cHLZUZJtpkeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bt385.EMLAKBANK\\Documents\\Windows.UI.Composition\\dotnet\\WPF\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj",
+  "projectFilePath": "C:\\Users\\bugra\\Documents\\ScrennCapturer\\bugrahan.topal-gmail.com\\src\\VisualLayerIntegration\\VisualLayerIntegration\\VisualLayerIntegration.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\microsoft.codeanalysis.fxcopanalyzers\\2.9.1\\microsoft.codeanalysis.fxcopanalyzers.2.9.1.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\microsoft.codeanalysis.versioncheckanalyzer\\2.9.1\\microsoft.codeanalysis.versioncheckanalyzer.2.9.1.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\microsoft.codequality.analyzers\\2.9.1\\microsoft.codequality.analyzers.2.9.1.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\microsoft.netcore.analyzers\\2.9.1\\microsoft.netcore.analyzers.2.9.1.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\microsoft.netframework.analyzers\\2.9.1\\microsoft.netframework.analyzers.2.9.1.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.17763.144-preview\\microsoft.windows.sdk.contracts.10.0.17763.144-preview.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\sharpdx\\4.2.0\\sharpdx.4.2.0.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\sharpdx.direct2d1\\4.2.0\\sharpdx.direct2d1.4.2.0.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\sharpdx.dxgi\\4.2.0\\sharpdx.dxgi.4.2.0.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\sharpdx.mathematics\\4.2.0\\sharpdx.mathematics.4.2.0.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\stylecop.analyzers\\1.0.2\\stylecop.analyzers.1.0.2.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0-preview.19073.11\\system.runtime.windowsruntime.4.6.0-preview.19073.11.nupkg.sha512",
-    "C:\\Users\\bt385.EMLAKBANK\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0-preview.19073.11\\system.runtime.windowsruntime.ui.xaml.4.6.0-preview.19073.11.nupkg.sha512"
+    "C:\\Users\\bugra\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.17763.144-preview\\microsoft.windows.sdk.contracts.10.0.17763.144-preview.nupkg.sha512",
+    "C:\\Users\\bugra\\.nuget\\packages\\sharpdx\\4.2.0\\sharpdx.4.2.0.nupkg.sha512",
+    "C:\\Users\\bugra\\.nuget\\packages\\sharpdx.direct2d1\\4.2.0\\sharpdx.direct2d1.4.2.0.nupkg.sha512",
+    "C:\\Users\\bugra\\.nuget\\packages\\sharpdx.dxgi\\4.2.0\\sharpdx.dxgi.4.2.0.nupkg.sha512",
+    "C:\\Users\\bugra\\.nuget\\packages\\sharpdx.mathematics\\4.2.0\\sharpdx.mathematics.4.2.0.nupkg.sha512",
+    "C:\\Users\\bugra\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\bugra\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0-preview.19073.11\\system.runtime.windowsruntime.4.6.0-preview.19073.11.nupkg.sha512",
+    "C:\\Users\\bugra\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0-preview.19073.11\\system.runtime.windowsruntime.ui.xaml.4.6.0-preview.19073.11.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Microsoft.Windows.SDK.Contracts 10.0.17763.144-preview, System.Runtime.WindowsRuntime (>= 4.6.0-preview.19052.1) öğesine bağımlı ancak System.Runtime.WindowsRuntime 4.6.0-preview.19052.1 bulunamadı. Yaklaşık bir en iyi eşleşme olan System.Runtime.WindowsRuntime 4.6.0-preview.19073.11 çözümlendi.",
+      "message": "Microsoft.Windows.SDK.Contracts 10.0.17763.144-preview depends on System.Runtime.WindowsRuntime (>= 4.6.0-preview.19052.1) but System.Runtime.WindowsRuntime 4.6.0-preview.19052.1 was not found. An approximate best match of System.Runtime.WindowsRuntime 4.6.0-preview.19073.11 was resolved.",
       "libraryId": "System.Runtime.WindowsRuntime",
       "targetGraphs": [
         ".NETFramework,Version=v4.7.2",
@@ -37,7 +31,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Microsoft.Windows.SDK.Contracts 10.0.17763.144-preview, System.Runtime.WindowsRuntime.UI.Xaml (>= 4.6.0-preview.19052.1) öğesine bağımlı ancak System.Runtime.WindowsRuntime.UI.Xaml 4.6.0-preview.19052.1 bulunamadı. Yaklaşık bir en iyi eşleşme olan System.Runtime.WindowsRuntime.UI.Xaml 4.6.0-preview.19073.11 çözümlendi.",
+      "message": "Microsoft.Windows.SDK.Contracts 10.0.17763.144-preview depends on System.Runtime.WindowsRuntime.UI.Xaml (>= 4.6.0-preview.19052.1) but System.Runtime.WindowsRuntime.UI.Xaml 4.6.0-preview.19052.1 was not found. An approximate best match of System.Runtime.WindowsRuntime.UI.Xaml 4.6.0-preview.19073.11 was resolved.",
       "libraryId": "System.Runtime.WindowsRuntime.UI.Xaml",
       "targetGraphs": [
         ".NETFramework,Version=v4.7.2",

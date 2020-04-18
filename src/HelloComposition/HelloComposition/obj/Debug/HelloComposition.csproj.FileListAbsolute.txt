@@ -19,3 +19,9 @@ C:\Users\bt385.EMLAKBANK\Documents\Windows.UI.Composition\dotnet\WPF\HelloCompos
 C:\Users\bt385.EMLAKBANK\Documents\Windows.UI.Composition\dotnet\WPF\HelloComposition\HelloComposition\obj\Debug\HelloComposition.csproj.CopyComplete
 C:\Users\bt385.EMLAKBANK\Documents\Windows.UI.Composition\dotnet\WPF\HelloComposition\HelloComposition\obj\Debug\HelloComposition.exe
 C:\Users\bt385.EMLAKBANK\Documents\Windows.UI.Composition\dotnet\WPF\HelloComposition\HelloComposition\obj\Debug\HelloComposition.pdb
+C:\Users\bugra\Documents\ScrennCapturer\bugrahan.topal-gmail.com\src\HelloComposition\HelloComposition\obj\Debug\CompositionHostControl.g.cs
+C:\Users\bugra\Documents\ScrennCapturer\bugrahan.topal-gmail.com\src\HelloComposition\HelloComposition\obj\Debug\MainWindow.g.cs
+C:\Users\bugra\Documents\ScrennCapturer\bugrahan.topal-gmail.com\src\HelloComposition\HelloComposition\obj\Debug\App.g.cs
+C:\Users\bugra\Documents\ScrennCapturer\bugrahan.topal-gmail.com\src\HelloComposition\HelloComposition\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\bugra\Documents\ScrennCapturer\bugrahan.topal-gmail.com\src\HelloComposition\HelloComposition\obj\Debug\HelloComposition_MarkupCompile.cache
+C:\Users\bugra\Documents\ScrennCapturer\bugrahan.topal-gmail.com\src\HelloComposition\HelloComposition\obj\Debug\HelloComposition_MarkupCompile.lref

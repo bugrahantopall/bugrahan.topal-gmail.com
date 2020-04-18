@@ -33,8 +33,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
+using Windows.Foundation;
 using Windows.Foundation.Metadata;
 using Windows.Graphics.Capture;
+using Windows.Media.AppRecording;
+using Windows.Storage;
 using Windows.UI.Composition;
 
 namespace WPFCaptureSample
@@ -230,14 +233,33 @@ namespace WPFCaptureSample
             {
                 sample.StartCaptureFromItem(item);
             }
+            
+        }
+        private AppRecordingResult operation;
+
+        private async void makevideo()
+        {
+            AppRecordingManager manager = AppRecordingManager.GetDefault();
+            AppRecordingStatus status = manager.GetStatus();
+            StorageFolder folder = await StorageFolder.GetFolderFromPathAsync("C:\\Videos");
+
+            StorageFile file = await folder.CreateFileAsync(
+                "capture.mp4", CreationCollisionOption.ReplaceExisting);
+
+            if (status.CanRecord || status.CanRecordTimeSpan)
+            {
+                operation = await manager.StartRecordingToFileAsync(file);
+            }
         }
 
         private void StartPrimaryMonitorCapture()
         {
-            MonitorInfo monitor = (from m in MonitorEnumerationHelper.GetMonitors()
-                                   where m.IsPrimary
-                                   select m).First();
-            StartHmonCapture(monitor.Hmon);
+            //MonitorInfo monitor = (from m in MonitorEnumerationHelper.GetMonitors()
+            //                       where m.IsPrimary
+            //                       select m).First();
+            //StartHmonCapture(monitor.Hmon);
+
+            makevideo();
         }
 
         private void StopCapture()
