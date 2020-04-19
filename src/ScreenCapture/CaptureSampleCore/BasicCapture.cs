@@ -24,10 +24,15 @@
 
 using Composition.WindowsRuntimeHelpers;
 using System;
+using Windows.Foundation;
 using Windows.Graphics;
 using Windows.Graphics.Capture;
 using Windows.Graphics.DirectX;
 using Windows.Graphics.DirectX.Direct3D11;
+using Windows.Media.Core;
+using Windows.Media.MediaProperties;
+using Windows.Media.Transcoding;
+using Windows.Storage;
 using Windows.UI.Composition;
 
 namespace CaptureSampleCore
@@ -79,6 +84,8 @@ namespace CaptureSampleCore
             lastSize = i.Size;
 
             framePool.FrameArrived += OnFrameArrived;
+
+            
         }
 
         public void Dispose()
@@ -92,6 +99,49 @@ namespace CaptureSampleCore
         public void StartCapture()
         {
             session.StartCapture();
+
+            CreateFile();
+
+            
+        }
+
+        private async void CreateFile()
+        {
+            var videoProps = VideoEncodingProperties.CreateUncompressed(MediaEncodingSubtypes.Bgra8, 1024, 768);
+            var videoDescriptor = new VideoStreamDescriptor(videoProps);
+
+            //videoDescriptor.EncodingProperties.FrameRate.Numerator = frn;
+            //videoDescriptor.EncodingProperties.FrameRate.Denominator = frd;
+            //videoDescriptor.EncodingProperties.Bitrate = (frn / frd) * w * h * 4 * 8;
+            var streamSource = new MediaStreamSource(videoDescriptor);
+
+
+            var tc = new MediaTranscoder();
+            var prof = MediaEncodingProfile.CreateMp4(VideoEncodingQuality.HD720p);
+            var tempFolder = ApplicationData.Current.TemporaryFolder;
+            var file = await tempFolder.CreateFileAsync("out2.mp4", CreationCollisionOption.ReplaceExisting);
+            var outputStream = await file.OpenAsync(FileAccessMode.ReadWrite);
+            try
+            {
+
+                var result = await tc.PrepareMediaStreamSourceTranscodeAsync(streamSource, outputStream, prof);
+                if (result.CanTranscode)
+                {
+                    //Debug.Print($"encoding");
+                    var op = result.TranscodeAsync();
+                    //op.Progress +=
+                    //    new AsyncActionProgressHandler<double>(TranscodeProgress);
+                    //op.Completed +=
+                    //    new AsyncActionWithProgressCompletedHandler<double>(TranscodeComplete);
+                    //Debug.WriteLine($"encoded");
+
+
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         public ICompositionSurface CreateSurface(Compositor compositor)
@@ -105,6 +155,11 @@ namespace CaptureSampleCore
 
             using (var frame = sender.TryGetNextFrame())
             {
+
+                
+
+
+
                 if (frame.ContentSize.Width != lastSize.Width ||
                     frame.ContentSize.Height != lastSize.Height)
                 {
@@ -120,6 +175,7 @@ namespace CaptureSampleCore
                         SharpDX.DXGI.Format.B8G8R8A8_UNorm,
                         SharpDX.DXGI.SwapChainFlags.None);
                 }
+
 
                 using (var backBuffer = swapChain.GetBackBuffer<SharpDX.Direct3D11.Texture2D>(0))
                 using (var bitmap = Direct3D11Helper.CreateSharpDXTexture2D(frame.Surface))

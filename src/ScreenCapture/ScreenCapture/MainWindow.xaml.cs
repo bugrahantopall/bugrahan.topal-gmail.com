@@ -22,16 +22,22 @@
 //  THE SOFTWARE.
 //  ---------------------------------------------------------------------------------
 
+using AviFile;
 using CaptureSampleCore;
 using Composition.WindowsRuntimeHelpers;
 using System;
+using System.Collections;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Numerics;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Interop;
 using Windows.Foundation;
 using Windows.Foundation.Metadata;
@@ -76,7 +82,7 @@ namespace WPFCaptureSample
 
         private void PrimaryMonitorButton_Click(object sender, RoutedEventArgs e)
         {
-            StopCapture();
+            //StopCapture();
             WindowComboBox.SelectedIndex = -1;
             MonitorComboBox.SelectedIndex = -1;
             StartPrimaryMonitorCapture();
@@ -111,7 +117,7 @@ namespace WPFCaptureSample
 
         private void WindowComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var comboBox = (ComboBox)sender;
+            var comboBox = (System.Windows.Controls.ComboBox)sender;
             var process = (Process)comboBox.SelectedItem;
 
             if (process != null)
@@ -134,7 +140,7 @@ namespace WPFCaptureSample
 
         private void MonitorComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var comboBox = (ComboBox)sender;
+            var comboBox = (System.Windows.Controls.ComboBox)sender;
             var monitor = (MonitorInfo)comboBox.SelectedItem;
 
             if (monitor != null)
@@ -171,8 +177,8 @@ namespace WPFCaptureSample
             target.Root = root;
 
             // Setup the rest of the sample application.
-            sample = new BasicSampleApplication(compositor);
-            root.Children.InsertAtTop(sample.Visual);
+            //sample = new BasicSampleApplication(compositor);
+            //root.Children.InsertAtTop(sample.Visual);
         }
 
         private void InitWindowList()
@@ -237,19 +243,49 @@ namespace WPFCaptureSample
         }
         private AppRecordingResult operation;
 
+
+        private bool continuetomakevideo=false;
         private async void makevideo()
         {
-            AppRecordingManager manager = AppRecordingManager.GetDefault();
-            AppRecordingStatus status = manager.GetStatus();
-            StorageFolder folder = await StorageFolder.GetFolderFromPathAsync("C:\\Videos");
+            //AppRecordingManager manager = AppRecordingManager.GetDefault();
+            //AppRecordingStatus status = manager.GetStatus();
+            //StorageFolder folder = await StorageFolder.GetFolderFromPathAsync("C:\\Videos");
 
-            StorageFile file = await folder.CreateFileAsync(
-                "capture.mp4", CreationCollisionOption.ReplaceExisting);
+            //StorageFile file = await folder.CreateFileAsync(
+            //    "capture.mp4", CreationCollisionOption.ReplaceExisting);
 
-            if (status.CanRecord || status.CanRecordTimeSpan)
+            //if (status.CanRecord || status.CanRecordTimeSpan)
+            //{
+            //    operation = await manager.StartRecordingToFileAsync(file);
+            //}
+            AviManager aviManager =
+                new AviManager(@"C:\Videos\new.avi", false);
+            int i = 0;
+            VideoStream aviStream = null;
+            while (continuetomakevideo==true)
             {
-                operation = await manager.StartRecordingToFileAsync(file);
+
+                Bitmap bmpScreenshot = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, PixelFormat.Format24bppRgb);
+
+
+                Graphics gfxScreenshot = Graphics.FromImage(bmpScreenshot);
+                gfxScreenshot.CopyFromScreen(0, 0, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+
+                if (i == 0)
+                    aviStream = aviManager.AddVideoStream(true, 1, bmpScreenshot);
+                else
+                    aviStream.AddFrame(bmpScreenshot);
+                //bitmapQueue.Enqueue(bmpScreenshot);
+                i++;
+                await Task.Delay(1000);
+                //Change the ImageFormat to jpeg to save hard disk or keep it in Tiff
+                //for higher resolution
+                //bmpScreenshot.Save("Dependencies\\temp.tif", ImageFormat.Tiff);
+
+                //bmpScreenshot = null;
             }
+            aviManager.Close();
+
         }
 
         private void StartPrimaryMonitorCapture()
@@ -258,13 +294,13 @@ namespace WPFCaptureSample
             //                       where m.IsPrimary
             //                       select m).First();
             //StartHmonCapture(monitor.Hmon);
-
+            continuetomakevideo = true;
             makevideo();
         }
 
         private void StopCapture()
         {
-            sample.StopCapture();
+            continuetomakevideo = false;
         }
     }
 }
